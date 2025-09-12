@@ -1,0 +1,41 @@
+/*
+Theme Name: My Grocery Theme
+Theme URI: http://localhost
+Author: Fredrik
+Author URI: http://localhost
+Description: A custom theme for WC Collections project.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-custom-theme
+*/
+
+#create-collection-page form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+#create-collection-page input,
+#create-collection-page textarea,
+#create-collection-page select,
+#create-collection-page button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#create-collection-page button {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#create-collection-page button:hover {
+    background: #005a8c;
+}
