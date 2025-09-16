@@ -3,7 +3,6 @@ get_header();
 
 if (have_posts()) : while (have_posts()) : the_post();
 
-    // Attached products
     $product_ids = get_post_meta(get_the_ID(), '_collection_product_ids', true);
     if (!is_array($product_ids)) {
         $product_ids = [];
@@ -37,7 +36,6 @@ if (have_posts()) : while (have_posts()) : the_post();
                 <?php endforeach; ?>
             </ul>
 
-            <!-- Purchase all button -->
             <form class="purchase-all" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
                 <?php wp_nonce_field('wc_collections_purchase'); ?>
                 <input type="hidden" name="action" value="wc_collections_purchase_all">

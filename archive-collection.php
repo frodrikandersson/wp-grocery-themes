@@ -5,7 +5,7 @@ $paged   = get_query_var('paged') ? get_query_var('paged') : 1;
 $tax     = 'collection_category';
 $cat     = get_query_var('collection_category') ?? ($_GET['cat'] ?? '');
 $search  = sanitize_text_field($_GET['s'] ?? '');
-$orderby = sanitize_text_field($_GET['orderby'] ?? 'date'); // 'date' or 'title'
+$orderby = sanitize_text_field($_GET['orderby'] ?? 'date'); 
 
 $args = [
     'post_type'      => 'collection',
@@ -13,12 +13,10 @@ $args = [
     'paged'          => $paged,
 ];
 
-// Search
 if (!empty($search)) {
     $args['s'] = $search;
 }
 
-// Category filter
 if (!empty($cat)) {
     $args['tax_query'] = [
         [
@@ -29,7 +27,6 @@ if (!empty($cat)) {
     ];
 }
 
-// Sorting
 if ($orderby === 'title') {
     $args['orderby'] = 'title';
     $args['order']   = 'ASC';

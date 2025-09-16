@@ -1,7 +1,7 @@
 </main>
 
 <footer>
-    <p>&copy; <?php echo date('Y'); ?> My Grocery Store</p>
+    <p>&copy; <?php echo date('Y'); ?> Snap Basket</p>
 </footer>
 
 <?php wp_footer(); ?>

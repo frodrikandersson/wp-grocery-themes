@@ -14,7 +14,6 @@ get_header();
     <p>Fill out the form below to create your recipe/collection. You can select existing products, add a description, and optionally request a coupon code.</p>
 
     <?php
-    // Embed the shortcode from your plugin
     echo do_shortcode('[collection_create_form]');
     ?>
 </div>
