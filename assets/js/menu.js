@@ -21,3 +21,17 @@ document.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const parent = this.parentElement;
+
+        if(window.innerWidth < 768){ 
+            if(!parent.classList.contains('open')) {
+                e.preventDefault();
+                parent.classList.add('open');
+            }
+        }
+    });
+});
+
