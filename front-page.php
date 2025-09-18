@@ -25,7 +25,7 @@
     <h2>Featured Recipes</h2>
     <div class="grid">
         <?php
-        echo do_shortcode('[products limit="3" columns="3" category="recept"]');
+        echo do_shortcode('[products limit="4" columns="4" category="recept"]');
         ?>
     </div>
     <div style="text-align:center; margin-top:20px;">
